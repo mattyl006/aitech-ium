@@ -1,7 +1,7 @@
 import matplotlib.pyplot as plt
 import torch
 from torch.utils.data import DataLoader
-from neutral_network import MLP, AtpDataset, test
+from train import MLP, AtpDataset, test
 
 def load_model():
     model = MLP()
@@ -31,6 +31,3 @@ with open('eval_result.txt', 'a+') as f:
 with open('eval_result.txt', 'r') as f:
     values = [float(line) for line in f.readlines() if line]
     make_plot(values)
-
-
-
